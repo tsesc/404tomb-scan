@@ -1,39 +1,44 @@
 # 404Tomb Scan
 
-A coding agent skill that scans [404tomb.com](https://404tomb.com)'s dead startup database (1000+ failed products) before you start building new ideas.
+404Tomb Scan is a skill for your coding agent that automatically scans [404tomb.com](https://404tomb.com)'s database of 1000+ dead internet products before you invest time building a new idea.
 
-## What it does
+## How it works
 
-When you describe a new startup idea, this skill automatically:
+When you describe a new startup idea, your coding agent doesn't just start building. It first checks [404tomb.com](https://404tomb.com) — a digital graveyard cataloging failed internet products — to find similar ideas that have already died.
 
-1. Generates relevant search keywords from your idea
-2. Searches the 404tomb.com API for similar dead products
-3. Filters results semantically for true relevance
-4. Reports matching products with lifespan, tags, and lessons
-5. Provides pattern analysis, differentiation opportunities, and a risk verdict
+The skill generates multiple search keywords from your idea, queries the 404tomb API in parallel, then uses semantic judgment to filter out false positives. For each relevant match, it reports what the product did, how long it lived, and what you can learn from its failure.
+
+After listing matches, it synthesizes patterns across similar failures and provides differentiation opportunities — concrete ways your idea could avoid the same fate. Every scan ends with a verdict: **safe**, **proceed with caution**, or **graveyard is full of these**.
+
+Because the skill triggers automatically when you brainstorm, you don't need to do anything special. Your coding agent just knows to check the graveyard first.
 
 ## Installation
 
-> Installation differs by platform. Claude Code and Cursor have built-in plugin support. Codex, OpenCode, and Gemini CLI require manual setup.
+**Note:** Installation differs by platform. Claude Code and Cursor have built-in plugin marketplaces. Codex, OpenCode, and Gemini CLI require manual setup.
 
-### Claude Code (via Marketplace)
+### Claude Code (via Plugin Marketplace)
 
-Add the marketplace, then install:
+In Claude Code, register the marketplace first:
 
-```
+```bash
 /plugin marketplace add tsesc/404tomb-marketplace
+```
+
+Then install the plugin from this marketplace:
+
+```bash
 /plugin install 404tomb-scan@404tomb-marketplace
 ```
 
-### Cursor
+### Cursor (via Plugin Marketplace)
 
-In Cursor Agent chat:
+In Cursor Agent chat, install from marketplace:
 
-```
+```text
 /add-plugin 404tomb-scan
 ```
 
-Or search for "404tomb-scan" in the plugin marketplace.
+or search for "404tomb-scan" in the plugin marketplace.
 
 ### Codex
 
@@ -65,24 +70,38 @@ gemini extensions update 404tomb-scan
 
 ### Verify Installation
 
-Start a new session and describe a startup idea (e.g., "I want to build an AI travel planner"). The agent should automatically invoke the 404tomb-scan skill and report similar failed products.
+Start a new session in your chosen platform and describe a startup idea (for example, "I want to build an AI travel planner" or "let's make a meditation app"). The agent should automatically invoke the 404tomb-scan skill and report similar failed products.
 
-## Usage
+## What's Inside
 
-Just describe your idea — the skill triggers automatically when brainstorming new products.
+### Skills
 
-```
-I want to build an AI-powered travel planner
-```
+- **404tomb-scan** — Multi-keyword API search against 404tomb.com with semantic filtering, pattern analysis, and risk verdicts
 
-The skill will scan 404tomb.com and report similar failed products with analysis.
+### API Reference
 
-You can also invoke it directly:
+The skill uses the following 404tomb.com endpoints:
 
-```
-/404tomb-scan
+| Endpoint | Purpose |
+|----------|---------|
+| `GET /api/search/dead?category=all&q={keyword}&limit=500` | Search dead products by keyword |
+| `GET /api/tags` | List all 181 product categories with counts |
+| `GET /api/products/filter?category={tagId}&limit=500` | Filter by category tag |
+| `GET /api/stats` | Get total deceased product count |
+
+## Updating
+
+Skills update automatically when you update the plugin:
+
+```bash
+/plugin update 404tomb-scan
 ```
 
 ## License
 
-MIT
+MIT License - see LICENSE file for details.
+
+## Support
+
+- **Issues**: https://github.com/tsesc/404tomb-scan/issues
+- **Marketplace**: https://github.com/tsesc/404tomb-marketplace

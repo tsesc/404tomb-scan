@@ -1,7 +1,7 @@
 {
   "name": "404tomb-scan",
   "displayName": "404Tomb Scan",
-  "description": "Scan 404tomb.com dead startup database before building new ideas",
+  "description": "Scan 404tomb.com's dead startup database before building new ideas",
   "version": "1.0.0",
   "author": {
     "name": "Jack Tse"
@@ -10,5 +10,6 @@
   "repository": "https://github.com/tsesc/404tomb-scan",
   "license": "MIT",
   "keywords": ["startup", "graveyard", "dead-products", "validation", "idea-screening"],
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json"
 }
