@@ -47,7 +47,7 @@ or search for "404tomb-scan" in the plugin marketplace.
 Tell Codex:
 
 ```
-Clone https://github.com/tsesc/404tomb-scan.git to ~/.codex/404tomb-scan, then symlink the skills directory: mkdir -p ~/.agents/skills && ln -s ~/.codex/404tomb-scan/skills ~/.agents/skills/404tomb-scan
+Fetch and follow instructions from https://raw.githubusercontent.com/tsesc/404tomb-scan/refs/heads/main/.codex/INSTALL.md
 ```
 
 **Detailed docs:** [.codex/INSTALL.md](.codex/INSTALL.md)
@@ -57,7 +57,7 @@ Clone https://github.com/tsesc/404tomb-scan.git to ~/.codex/404tomb-scan, then s
 Tell OpenCode:
 
 ```
-Clone https://github.com/tsesc/404tomb-scan.git to ~/.config/opencode/404tomb-scan, then symlink skills: mkdir -p ~/.config/opencode/skills && ln -s ~/.config/opencode/404tomb-scan/skills ~/.config/opencode/skills/404tomb-scan
+Fetch and follow instructions from https://raw.githubusercontent.com/tsesc/404tomb-scan/refs/heads/main/.opencode/INSTALL.md
 ```
 
 **Detailed docs:** [.opencode/INSTALL.md](.opencode/INSTALL.md)

@@ -47,7 +47,7 @@
 告訴 Codex：
 
 ```
-Clone https://github.com/tsesc/404tomb-scan.git to ~/.codex/404tomb-scan, then symlink the skills directory: mkdir -p ~/.agents/skills && ln -s ~/.codex/404tomb-scan/skills ~/.agents/skills/404tomb-scan
+Fetch and follow instructions from https://raw.githubusercontent.com/tsesc/404tomb-scan/refs/heads/main/.codex/INSTALL.md
 ```
 
 **詳細文件：** [.codex/INSTALL.md](.codex/INSTALL.md)
@@ -57,7 +57,7 @@ Clone https://github.com/tsesc/404tomb-scan.git to ~/.codex/404tomb-scan, then s
 告訴 OpenCode：
 
 ```
-Clone https://github.com/tsesc/404tomb-scan.git to ~/.config/opencode/404tomb-scan, then symlink skills: mkdir -p ~/.config/opencode/skills && ln -s ~/.config/opencode/404tomb-scan/skills ~/.config/opencode/skills/404tomb-scan
+Fetch and follow instructions from https://raw.githubusercontent.com/tsesc/404tomb-scan/refs/heads/main/.opencode/INSTALL.md
 ```
 
 **詳細文件：** [.opencode/INSTALL.md](.opencode/INSTALL.md)
