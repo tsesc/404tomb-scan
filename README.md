@@ -1,5 +1,7 @@
 # 404Tomb Scan
 
+[English](README.md) | [繁體中文](README.zh-TW.md)
+
 404Tomb Scan is a skill for your coding agent that automatically scans [404tomb.com](https://404tomb.com)'s database of 1000+ dead internet products before you invest time building a new idea.
 
 ## How it works
