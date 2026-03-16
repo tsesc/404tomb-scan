@@ -16,10 +16,13 @@ When you describe a new startup idea, this skill automatically:
 
 > Installation differs by platform. Claude Code and Cursor have built-in plugin support. Codex, OpenCode, and Gemini CLI require manual setup.
 
-### Claude Code
+### Claude Code (via Marketplace)
+
+Add the marketplace, then install:
 
 ```
-/plugin install 404tomb-scan@tsesc
+/plugin marketplace add tsesc/404tomb-marketplace
+/plugin install 404tomb-scan@404tomb-marketplace
 ```
 
 ### Cursor
