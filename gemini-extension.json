@@ -1,0 +1,6 @@
+{
+  "name": "404tomb-scan",
+  "description": "Scan 404tomb.com dead startup database before building new ideas",
+  "version": "1.0.0",
+  "contextFileName": "GEMINI.md"
+}
